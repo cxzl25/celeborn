@@ -183,7 +183,9 @@ abstract class HttpService extends Service with Logging {
 
   def isDecommissioning: String = throw new UnsupportedOperationException()
 
-  def exit(exitType: String): String = throw new UnsupportedOperationException()
+  def exit(exitType: String): String = exit(exitType, null)
+
+  def exit(exitType: String, timeout: String): String = throw new UnsupportedOperationException()
 
   def handleWorkerEvent(
       workerEventType: WorkerEventType,
